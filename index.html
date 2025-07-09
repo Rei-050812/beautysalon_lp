@@ -44,9 +44,6 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav class="nav-menu">
-                <button class="nav-close" aria-label="メニューを閉じる">
-                    <i class="fas fa-times"></i>
-                </button>
                 <a href="#services">サービス</a>
                 <a href="#testimonials">お客様の声</a>
                 <a href="#flow">施術の流れ</a>
@@ -58,9 +55,13 @@
     </header>
 
     <!-- サービス紹介 -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 data-aos="fade-up">人気のサービス</h2>
+            <div class="section-intro" data-aos="fade-up">
+                <h3 class="catch-text">あなただけの美しさを引き出す、特別なケア</h3>
+                <p class="section-description">当サロンでは、お客様一人ひとりの肌質や悩みに合わせたカスタマイズケアをご提供。自然由来の成分と最新技術を組み合わせた施術で、本来の美しさを引き出します。</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card tilt-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card-inner">
@@ -106,9 +107,13 @@
     </section>
 
     <!-- お客様の声 -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <h2 data-aos="fade-up">お客様の声</h2>
+            <div class="section-intro" data-aos="fade-up">
+                <h3 class="catch-text">実感を伝える、リアルなお客様の体験</h3>
+                <p class="section-description">実際に当サロンをご利用いただいたお客様の生の声をご紹介。施術後の変化や満足度を実感とともにお伝えします。</p>
+            </div>
             <div class="testimonials-container" data-aos="fade-up" data-aos-delay="100">
                 <!-- Swiper -->
                 <div class="swiper testimonialSwiper">
@@ -162,6 +167,10 @@
     <section class="flow" id="flow">
         <div class="container">
             <h2 data-aos="fade-up">施術の流れ</h2>
+            <div class="section-intro" data-aos="fade-up">
+                <h3 class="catch-text">安心と満足をお約束する、4つのステップ</h3>
+                <p class="section-description">初めての方でも安心してご利用いただけるよう、カウンセリングから施術、アフターケアまでの流れをご紹介します。お客様一人ひとりに寄り添ったサービスをご提供いたします。</p>
+            </div>
             <div class="flow-timeline-container" data-aos="fade-up" data-aos-delay="100">
                 <div class="flow-timeline">
                     <div class="flow-step">
@@ -169,7 +178,7 @@
                         <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
                         <h3>カウンセリング</h3>
                         <p>お客様の肉質やお悩みに合わせた施術プランをご提案します。</p>
-                        <a href="#reservation" class="btn secondary-btn reservation-btn">予約する</a>
+                        <a href="#reservation" class="btn primary-btn">予約する</a>
                     </div>
                     <div class="flow-connector"></div>
                     <div class="flow-step">
@@ -177,7 +186,7 @@
                         <div class="step-icon"><i class="fas fa-hand-sparkles"></i></div>
                         <h3>施術</h3>
                         <p>経験豊富なスタッフが丸ごと担当し、最適なケアを行います。</p>
-                        <a href="#reservation" class="btn secondary-btn reservation-btn">予約する</a>
+                        <a href="#reservation" class="btn primary-btn">予約する</a>
                     </div>
                     <div class="flow-connector"></div>
                     <div class="flow-step">
@@ -217,6 +226,10 @@
     <section class="campaign" id="campaign">
         <div class="container">
             <h2 data-aos="fade-up">新規客様限定キャンペーン</h2>
+            <div class="section-intro" data-aos="fade-up">
+                <h3 class="catch-text">特別な出会いを、特別な価格で</h3>
+                <p class="section-description">初めてご利用いただくお客様に、当サロンの魅力を体験していただくための特別プランをご用意しました。この機会にぜひ当サロンの技術とおもてなしをお試しください。</p>
+            </div>
             <div class="campaign-content" data-aos="fade-up" data-aos-delay="100">
                 <div class="campaign-details">
                     <div class="campaign-icon">
@@ -236,7 +249,7 @@
                         <p>2023年12月31日までの期間限定キャンペーンです。お早めにご予約ください。</p>
                     </div>
                 </div>
-                <a href="#" class="btn primary-btn reservation-btn" data-aos="fade-up" data-aos-delay="200">今すぐ予約する</a>
+                <a href="#reservation" class="btn primary-btn" data-aos="fade-up" data-aos-delay="200">今すぐ予約する</a>
             </div>
         </div>
         
@@ -776,7 +789,12 @@
 
     <!-- フローティング予約ボタン -->
     <div class="floating-reservation">
-        <a href="#" id="openReservationModalBtn" class="btn primary-btn">予約する</a>
+        <a href="#reservation" class="btn primary-btn">予約する</a>
+    </div>
+    
+    <!-- モバイル用予約ボタン -->
+    <div class="mobile-reservation-button">
+        <a href="#reservation" class="btn primary-btn">予約セクションへ移動</a>
     </div>
     
     <!-- フローティングチャットボタン -->

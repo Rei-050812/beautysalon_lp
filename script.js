@@ -264,14 +264,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Floating reservation button
+    // Floating reservation button and mobile sticky button
     const floatingReservation = document.querySelector('.floating-reservation');
-    
+    const mobileReservationButton = document.querySelector('.mobile-reservation-button');
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > heroSection.offsetHeight) {
+        // Show/hide floating reservation button
+        if (window.scrollY > window.innerHeight) {
             floatingReservation.classList.add('active');
         } else {
             floatingReservation.classList.remove('active');
+        }
+        
+        // Show/hide mobile sticky reservation button
+        if (window.innerWidth <= 768 && window.scrollY > 300) {
+            mobileReservationButton.classList.add('active');
+        } else {
+            mobileReservationButton.classList.remove('active');
         }
     });
     

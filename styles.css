@@ -84,6 +84,27 @@ img {
 
 section {
     padding: 80px 0;
+    position: relative;
+}
+
+/* Section intro styles */
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.catch-text {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-description {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 /* Button styles */
@@ -1390,16 +1411,45 @@ footer {
     transition: var(--transition);
 }
 
+/* Mobile Sticky Reservation Button */
+.mobile-reservation-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 10px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    display: none;
+    text-align: center;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.mobile-reservation-button.active {
+    transform: translateY(0);
+}
+
+.mobile-reservation-button .btn {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+}
+
 .floating-reservation.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.floating-reservation .btn {
+.floating-reservation .btn,
+.mobile-reservation-button .btn {
     box-shadow: 0 5px 20px rgba(255, 127, 127, 0.4);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -1443,6 +1493,10 @@ footer {
 @media (max-width: 768px) {
     h1 {
         font-size: 2.2rem;
+    }
+    
+    .mobile-reservation-button {
+        display: block;
     }
     
     h2 {
