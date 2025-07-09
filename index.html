@@ -27,7 +27,7 @@
                 <h1 class="animated-text">美しさを引き出す<br>特別な空間</h1>
                 <p>あなただけの美しさを見つける特別なサロン体験をご提供します</p>
                 <div class="cta-container">
-                    <a href="#reservation" class="btn primary-btn cta-button">
+                    <a href="#reservation" class="btn primary-btn">
                         <span class="cta-text">今すぐ予約する</span>
                         <span class="cta-icon"><i class="fas fa-arrow-right"></i></span>
                     </a>
@@ -258,71 +258,7 @@
             <span>期間<br>限定</span>
         </div>
         
-        <!-- モーダルオーバーレイ -->
-        <div class="modal-overlay">
-            <div class="modal">
-                <button class="modal-close">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="modal-header">
-                    <h3>ご予約フォーム</h3>
-                    <p>下記フォームに必要事項をご記入の上、送信してください。</p>
-                </div>
-                <form class="reservation-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">お名前</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="date">希望日</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time">希望時間</label>
-                            <select id="time" name="time" required>
-                                <option value="">選択してください</option>
-                                <option value="10:00">10:00</option>
-                                <option value="11:00">11:00</option>
-                                <option value="13:00">13:00</option>
-                                <option value="14:00">14:00</option>
-                                <option value="15:00">15:00</option>
-                                <option value="16:00">16:00</option>
-                                <option value="17:00">17:00</option>
-                                <option value="18:00">18:00</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">希望メニュー</label>
-                        <select id="service" name="service" required>
-                            <option value="">選択してください</option>
-                            <option value="facial">フェイシャルトリートメント</option>
-                            <option value="hair">ヘアスタイリング</option>
-                            <option value="body">ボディトリートメント</option>
-                            <option value="other">その他</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">備考（オプショナル）</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <div class="form-submit">
-                        <button type="submit" class="btn primary-btn">予約を確定する</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+
     </section>
     
     <!-- 予約フォーム -->
@@ -500,66 +436,7 @@
         <div class="badge-content">初回限定<br>20%OFF</div>
     </div>
     
-    <!-- 予約モーダル -->
-    <div class="modal-overlay" id="reservationModal">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3>ご予約</h3>
-                <button class="modal-close" id="closeReservationModal"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <form class="reservation-form modal-form">
-                    <div class="form-group">
-                        <label for="modal-name">お名前</label>
-                        <input type="text" id="modal-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="modal-email">メールアドレス</label>
-                        <input type="email" id="modal-email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="modal-phone">電話番号</label>
-                        <input type="tel" id="modal-phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="modal-service">ご希望のサービス</label>
-                        <select id="modal-service" name="service" required>
-                            <option value="">選択してください</option>
-                            <option value="facial">フェイシャルトリートメント</option>
-                            <option value="hair">ヘアスタイリング</option>
-                            <option value="nail">ネイルアート</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group half">
-                            <label for="modal-date">ご希望の日付</label>
-                            <input type="date" id="modal-date" name="date" required>
-                        </div>
-                        <div class="form-group half">
-                            <label for="modal-time">ご希望の時間</label>
-                            <select id="modal-time" name="time" required>
-                                <option value="">選択してください</option>
-                                <option value="10:00">10:00</option>
-                                <option value="11:00">11:00</option>
-                                <option value="12:00">12:00</option>
-                                <option value="13:00">13:00</option>
-                                <option value="14:00">14:00</option>
-                                <option value="15:00">15:00</option>
-                                <option value="16:00">16:00</option>
-                                <option value="17:00">17:00</option>
-                                <option value="18:00">18:00</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="modal-message">ご要望など</label>
-                        <textarea id="modal-message" name="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">予約を確定する</button>
-                </form>
-            </div>
-        </div>
-    </div>
+
 
     <!-- FAQ -->
     <section class="faq">

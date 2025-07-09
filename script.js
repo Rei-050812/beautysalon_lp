@@ -148,48 +148,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Campaign badge and modal
+    // Campaign badge - link to reservation section
     const campaignBadge = document.querySelector('.campaign-badge');
-    const modal = document.querySelector('.modal-overlay');
-    const modalClose = document.querySelector('.modal-close');
-    const reservationButtons = document.querySelectorAll('.reservation-btn');
-    
-    function openModal() {
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    }
-    
-    function closeModal() {
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
     
     if (campaignBadge) {
-        campaignBadge.addEventListener('click', openModal);
-    }
-    
-    if (modalClose) {
-        modalClose.addEventListener('click', closeModal);
-    }
-    
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
+        campaignBadge.addEventListener('click', () => {
+            const reservationSection = document.getElementById('reservation');
+            if (reservationSection) {
+                reservationSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     }
-    
-    reservationButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
-    });
     
     // FAQ Accordion with Lottie animations
     const faqItems = document.querySelectorAll('.faq-item');
