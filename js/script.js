@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initServiceCards();
     initFeedbackButtons();
     initDragScroll();
+    initSmoothScrolling();
 });
 
 // Initialize Swiper for testimonials
@@ -106,12 +107,19 @@ function initLottieAnimations() {
 function initFloatingCTA() {
     const floatingCTA = document.querySelector('.floating-cta');
     const heroSection = document.querySelector('.hero');
+    const reservationSection = document.querySelector('.reservation');
     
-    if (floatingCTA && heroSection) {
+    if (floatingCTA && heroSection && reservationSection) {
         window.addEventListener('scroll', () => {
             const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const reservationTop = reservationSection.offsetTop;
+            const reservationBottom = reservationTop + reservationSection.offsetHeight;
+            const currentScroll = window.scrollY + window.innerHeight;
             
-            if (window.scrollY > heroBottom) {
+            // Show floating CTA when scrolled past hero section
+            // Hide when in reservation section view
+            if (window.scrollY > heroBottom && 
+                (window.scrollY < reservationTop - 100 || currentScroll > reservationBottom)) {
                 floatingCTA.classList.add('visible');
             } else {
                 floatingCTA.classList.remove('visible');
@@ -123,7 +131,6 @@ function initFloatingCTA() {
 // Initialize smooth scroll for anchor links
 function initSmoothScroll() {
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
-    const ctaButtons = document.querySelectorAll('.cta-button');
     const campaignButton = document.querySelector('.campaign-banner .cta-button');
     
     // Handle all anchor links
@@ -144,19 +151,16 @@ function initSmoothScroll() {
         });
     });
     
-    // Handle CTA buttons (scroll to hero section by default)
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // In a real implementation, this would open a reservation modal or form
-            alert('予約システムへ接続します。実際の実装では予約フォームが開きます。');
-        });
-    });
-    
-    // Handle campaign button (scroll to hero section)
+    // Handle campaign button
     if (campaignButton) {
         campaignButton.addEventListener('click', function() {
             // In a real implementation, this would apply the campaign discount
-            alert('特典が適用されました。実際の実装では予約フォームが特典適用済みで開きます。');
+            const reservationSection = document.querySelector('#reservation');
+            if (reservationSection) {
+                reservationSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     }
 }

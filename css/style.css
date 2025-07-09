@@ -165,35 +165,39 @@ section {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: url('../images/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
+    background: linear-gradient(135deg, var(--color-pastel-pink), #f9e2ff, #e0f0ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.hero-content {
+.glass-panel {
     position: relative;
-    z-index: 1;
-    max-width: 800px;
+    z-index: 2;
+    max-width: 600px;
+    width: 90%;
     padding: var(--spacing-lg);
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-glass);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
 }
 
 .hero h1 {
@@ -612,6 +616,130 @@ section {
 
 .floating-cta .cta-button {
     box-shadow: var(--shadow-lg);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== ABOUT SALON SECTION ===== */
+.about-salon {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg) 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===== ACCESS MAP SECTION ===== */
+.access-map {
+    background-color: var(--color-off-white);
+    padding: var(--spacing-lg) 0;
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.access-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--color-rose-gold);
+    margin-top: 0.25rem;
+}
+
+.info-item h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+/* ===== RESERVATION FORM ===== */
+.reservation {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg) 0;
+}
+
+.reservation-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    background-color: var(--color-off-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.reservation-form button {
+    grid-column: span 2;
+    margin-top: var(--spacing-sm);
+    padding: 1rem;
 }
 
 /* ===== RESPONSIVE STYLES ===== */
@@ -621,9 +749,23 @@ section {
         --font-size-large: 1.25rem;
     }
     
-    .hero-content {
+    .glass-panel {
         padding: var(--spacing-md);
         width: 90%;
+    }
+    
+    .about-grid,
+    .access-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .reservation-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .reservation-form button {
+        grid-column: span 1;
     }
     
     .service-cards {
