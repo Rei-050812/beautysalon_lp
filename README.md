@@ -1,28 +1,45 @@
 # Beauty Salon Landing Page
 
-A modern, responsive landing page for a beauty salon featuring:
+## 概要 (Overview)
+高級感と女性らしさを兼ね備えた美容サロンのランディングページです。モバイルファーストで設計され、清潔感のあるデザインと直感的なユーザー体験を提供します。
 
-- Clean, elegant design with white and pastel colors
-- Coral pink accent buttons
-- Mobile-first approach
-- Persistent reservation button
-- Interactive elements (accordion FAQ, smooth scrolling)
+## 特徴 (Features)
+- **モバイルファースト**: すべてのデバイスで最適な表示を実現
+- **インタラクティブ要素**: ホバーエフェクト、フリップカード、ドラッグスクロールなど
+- **アニメーション**: Lottieアニメーション、スムーズなトランジション
+- **レスポンシブデザイン**: スマートフォン、タブレット、デスクトップに対応
 
-## Sections
+## セクション (Sections)
+1. **ヒーローセクション**: 高品質なビジュアルとキャッチコピー
+2. **サービス紹介**: 3つのフリップカードでサービスを紹介
+3. **お客様の声**: Swiper.jsを使用したカルーセル表示
+4. **施術フロー**: ドラッグ操作可能なタイムライン
+5. **特典・キャンペーン**: 初回限定特典バナー
+6. **FAQ**: アコーディオン形式でよくある質問に回答
+7. **フッター**: サロン情報とSNSリンク
 
-1. Hero section with reservation button
-2. Service introduction with icons
-3. Customer testimonials
-4. Treatment flow illustration
-5. Special campaign banner
-6. FAQ accordion
-7. Reservation form
-8. Footer with contact information and social links
-
-## Technologies Used
-
+## 技術スタック (Tech Stack)
 - HTML5
-- CSS3 (with custom variables)
-- JavaScript (vanilla)
-- Font Awesome icons
-- Google Fonts (Noto Sans JP)
+- CSS3 (カスタムプロパティ、Flexbox、Grid)
+- JavaScript (ES6+)
+- Swiper.js (カルーセル)
+- Lottie-web (アニメーション)
+
+## デザイン要素 (Design Elements)
+- **カラーパレット**: ホワイト、パステルピンク、ローズゴールド
+- **フォント**: 柔らかな曲線を持つサンセリフ体
+- **視覚効果**: ガラスモーフィズム、シャドウ、グラデーション
+
+## 使用方法 (Usage)
+1. リポジトリをクローン
+2. `index.html`をブラウザで開く
+
+## カスタマイズ (Customization)
+- `css/style.css`の`:root`セクションでカラーパレットやフォントサイズを変更可能
+- `images/`ディレクトリに実際のサロン画像を追加
+- `index.html`のテキストコンテンツを実際のサロン情報に更新
+
+## 注意点 (Notes)
+- 実際の予約システムとの連携が必要です
+- 画像はプレースホルダーのため、実際のサロン画像に置き換えてください
+- SNSリンクは実際のアカウントURLに更新してください
