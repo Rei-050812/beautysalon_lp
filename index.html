@@ -3,705 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美容サロン | 美しさを引き出す特別な空間</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Beauty Salon - あなただけの美しさを引き出す</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- ヒーローセクション -->
-    <section class="hero">
-        <div class="hero-background">
-            <video autoplay muted loop playsinline id="hero-video">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-getting-a-facial-massage-at-spa-salon-4877-large.mp4" type="video/mp4">
-                <!-- フォールバック用の背景画像 -->
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="animated-text">美しさを引き出す<br>特別な空間</h1>
-                <p>あなただけの美しさを見つける特別なサロン体験をご提供します</p>
-                <div class="cta-container">
-                    <a href="#reservation" class="btn primary-btn">
-                        <span class="cta-text">今すぐ予約する</span>
-                        <span class="cta-icon"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ヘッダー -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">美容サロン</div>
-            <button class="nav-toggle" aria-label="メニューを開く">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav-menu">
-                <a href="#services">サービス</a>
-                <a href="#testimonials">お客様の声</a>
-                <a href="#flow">施術の流れ</a>
-                <a href="#campaign">キャンペーン</a>
-                <a href="#faq">よくある質問</a>
-                <a href="#reservation" class="btn primary-btn">予約する</a>
-            </nav>
+    <header id="hero" class="hero-section">
+        <div class="parallax-bg" id="parallax-bg"></div>
+        <div class="hero-content">
+            <h1 class="catchphrase">その日の気分で、最高の私に。</h1>
+            <p class="sub-text">鏡を見るのが楽しくなる、オーダーメイドの施術をご提案します。</p>
+            <p class="dynamic-offer">お住まいの<span id="city-name">〇〇市</span>限定 初回30%OFF</p>
+            <a href="#reservation" class="cta-button">今すぐ予約する</a>
         </div>
     </header>
 
-    <!-- サービス紹介 -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 data-aos="fade-up">人気のサービス</h2>
-            <div class="section-intro" data-aos="fade-up">
-                <h3 class="catch-text">あなただけの美しさを引き出す、特別なケア</h3>
-                <p class="section-description">当サロンでは、お客様一人ひとりの肌質や悩みに合わせたカスタマイズケアをご提供。自然由来の成分と最新技術を組み合わせた施術で、本来の美しさを引き出します。</p>
+    <main>
+        <!-- サービス紹介 -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">私たちのサービス</h2>
+                <p class="section-subtitle">あなた本来の美しさを最大限に引き出す、３つの特別コースをご用意しました。</p>
+                <div class="services-content">
+                    <div class="service-cards-container">
+                        <!-- カード1 -->
+                        <div class="service-card" id="card-relax">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/service1.jpg" alt="リラクゼーション" class="card-img">
+                                    <h3>極上リラックスコース</h3>
+                                </div>
+                                <div class="card-back">
+                                    <h4>極上リラックスコース</h4>
+                                    <p>心身の疲れを癒す、オールハンドのトリートメント。深いリラクゼーションへと導きます。</p>
+                                    <span>120分 / ¥18,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- カード2 -->
+                        <div class="service-card" id="card-liftup">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/service2.jpg" alt="リフトアップ" class="card-img">
+                                    <h3>即効リフトアップコース</h3>
+                                </div>
+                                <div class="card-back">
+                                    <h4>即効リフトアップコース</h4>
+                                    <p>最新機器を使用し、気になるたるみを改善。シャープなフェイスラインを実現します。</p>
+                                    <span>90分 / ¥22,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- カード3 -->
+                        <div class="service-card" id="card-bright">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/service3.jpg" alt="ブライトニング" class="card-img">
+                                    <h3>透明感ブライトニングコース</h3>
+                                </div>
+                                <div class="card-back">
+                                    <h4>透明感ブライトニングコース</h4>
+                                    <p>高濃度ビタミンCを導入し、シミやくすみをケア。内側から輝くような透明肌へ。</p>
+                                    <span>75分 / ¥20,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diagnosis-widget">
+                        <h3>あなたにぴったりのコースは？</h3>
+                        <p>簡単な質問に答えて、おすすめのコースを見つけましょう。</p>
+                        <form id="diagnosis-form">
+                            <label>今、一番気になることは？</label>
+                            <select id="diagnosis-select">
+                                <option value="">選択してください</option>
+                                <option value="relax">疲れを癒したい</option>
+                                <option value="liftup">フェイスラインを引き締めたい</option>
+                                <option value="bright">肌の透明感が欲しい</option>
+                            </select>
+                        </form>
+                        <div id="diagnosis-result" class="result-message"></div>
+                    </div>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card tilt-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <h3>フェイシャルトリートメント</h3>
-                        <p>肌質に合わせた贅沢なスキンケア。自然由来の成分を使用し、肌本来の輝きを引き出します。</p>
-                        <div class="service-buttons vertical">
-                            <a href="#" class="btn secondary-btn">詳細を見る</a>
-                            <a href="#reservation" class="btn primary-btn">予約する</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card tilt-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                        <h3>ヘアスタイリング</h3>
-                        <p>トレンドを取り入れた似合わせカット。あなたの骨格や髪質に合わせた最適なスタイルをご提案します。</p>
-                        <div class="service-buttons vertical">
-                            <a href="#" class="btn secondary-btn">詳細を見る</a>
-                            <a href="#reservation" class="btn primary-btn">予約する</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card tilt-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3>ネイルアート</h3>
-                        <p>季節に合わせたデザインネイル。トレンドカラーや最新技術を取り入れた芸術的なネイルをご提供します。</p>
-                        <div class="service-buttons vertical">
-                            <a href="#" class="btn secondary-btn">詳細を見る</a>
-                            <a href="#reservation" class="btn primary-btn">予約する</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- お客様の声 -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 data-aos="fade-up">お客様の声</h2>
-            <div class="section-intro" data-aos="fade-up">
-                <h3 class="catch-text">実感を伝える、リアルなお客様の体験</h3>
-                <p class="section-description">実際に当サロンをご利用いただいたお客様の生の声をご紹介。施術後の変化や満足度を実感とともにお伝えします。</p>
-            </div>
-            <div class="testimonials-container" data-aos="fade-up" data-aos-delay="100">
-                <!-- Swiper -->
-                <div class="swiper testimonialSwiper">
+        <!-- お客様の声 -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">お客様の声</h2>
+                <p class="section-subtitle">実際にサービスを体験されたお客様のリアルな感想をご覧ください。</p>
+                <!-- Slider main container -->
+                <div class="swiper testimonials-slider">
+                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
+                        <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="testimonial-image">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="お客様1">
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                                    <p class="quote">"フェイシャルトリートメントを受けて、肌の調子が格段に良くなりました。スタッフの方の丁寧な対応も素晴らしく、毎回の施術が楽しみになっています。"</p>
-                                    <p class="author">佐藤 美咲さん</p>
-                                </div>
+                            <div class="video-container">
+                                <video src="videos/testimonial1.mp4" muted playsinline loop class="testimonial-video"></video>
+                                <div class="play-button-overlay"></div>
+                                <a href="#reservation" class="dynamic-cta">私も体験してみたい！</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="testimonial-image">
-                                    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="お客様2">
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                                    <p class="quote">"ネイルアートが本当に素敵で、友達からも褒められました。デザイナーの方のセンスが素晴らしく、気分も明るくなりました。次回も楽しみにしています。"</p>
-                                    <p class="author">田中 由美さん</p>
-                                </div>
+                            <div class="video-container">
+                                <video src="videos/testimonial2.mp4" muted playsinline loop class="testimonial-video"></video>
+                                <div class="play-button-overlay"></div>
+                                <a href="#reservation" class="dynamic-cta">私も体験してみたい！</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="testimonial-image">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="お客様3">
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                                    <p class="quote">"ボディマッサージで日頃の疲れがすっかり取れました。セラピストの方の手技が素晴らしく、定期的に通いたいと思います。"</p>
-                                    <p class="author">鈴木 健太さん</p>
-                                </div>
+                            <div class="video-container">
+                                <video src="videos/testimonial3.mp4" muted playsinline loop class="testimonial-video"></video>
+                                <div class="play-button-overlay"></div>
+                                <a href="#reservation" class="dynamic-cta">私も体験してみたい！</a>
                             </div>
                         </div>
                     </div>
+                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 施術の流れ -->
-    <section class="flow" id="flow">
-        <div class="container">
-            <h2 data-aos="fade-up">施術の流れ</h2>
-            <div class="section-intro" data-aos="fade-up">
-                <h3 class="catch-text">安心と満足をお約束する、4つのステップ</h3>
-                <p class="section-description">初めての方でも安心してご利用いただけるよう、カウンセリングから施術、アフターケアまでの流れをご紹介します。お客様一人ひとりに寄り添ったサービスをご提供いたします。</p>
-            </div>
-            <div class="flow-timeline-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="flow-timeline">
-                    <div class="flow-step">
-                        <div class="step-number">1</div>
-                        <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
-                        <h3>カウンセリング</h3>
-                        <p>お客様の肉質やお悩みに合わせた施術プランをご提案します。</p>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
-                    </div>
-                    <div class="flow-connector"></div>
-                    <div class="flow-step">
-                        <div class="step-number">2</div>
-                        <div class="step-icon"><i class="fas fa-hand-sparkles"></i></div>
-                        <h3>施術</h3>
-                        <p>経験豊富なスタッフが丸ごと担当し、最適なケアを行います。</p>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
-                    </div>
-                    <div class="flow-connector"></div>
-                    <div class="flow-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <h3>アフターケア</h3>
-                            <p>施術後のケア方法やホームケアのアドバイスをご提供。持続的な美しさをサポートいたします。</p>
-                        </div>
-                    </div>
-                    <div class="flow-connector"></div>
-                    <div class="flow-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <h3>次回の予約</h3>
-                            <p>最適なタイミングでの次回の予約をご提案。定期的なケアで美しさを維持しましょう。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-navigation">
-                    <button class="timeline-nav-btn prev-btn" aria-label="前へ"><i class="fas fa-chevron-left"></i></button>
-                    <button class="timeline-nav-btn next-btn" aria-label="次へ"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="sticky-next-button">
-                <a href="#campaign" class="btn primary-btn">特典を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- キャンペーン -->
-    <section class="campaign" id="campaign">
-        <div class="container">
-            <h2 data-aos="fade-up">新規客様限定キャンペーン</h2>
-            <div class="section-intro" data-aos="fade-up">
-                <h3 class="catch-text">特別な出会いを、特別な価格で</h3>
-                <p class="section-description">初めてご利用いただくお客様に、当サロンの魅力を体験していただくための特別プランをご用意しました。この機会にぜひ当サロンの技術とおもてなしをお試しください。</p>
-            </div>
-            <div class="campaign-content" data-aos="fade-up" data-aos-delay="100">
-                <div class="campaign-details">
-                    <div class="campaign-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <div class="campaign-text">
-                        <h3>初回施術 20%OFF</h3>
-                        <p>初めてのお客様限定で、全メニュー20%割引でご利用いただけます。さらに特別ケアキットをプレゼントいたします。</p>
-                    </div>
-                </div>
-                <div class="campaign-details">
-                    <div class="campaign-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="campaign-text">
-                        <h3>期間限定</h3>
-                        <p>2023年12月31日までの期間限定キャンペーンです。お早めにご予約ください。</p>
-                    </div>
-                </div>
-                <a href="#reservation" class="btn primary-btn" data-aos="fade-up" data-aos-delay="200">今すぐ予約する</a>
-            </div>
-        </div>
-        
-        <!-- フローティングバッジ -->
-        <div class="campaign-badge">
-            <span>期間<br>限定</span>
-        </div>
-        
-
-    </section>
-    
-    <!-- 予約フォーム -->
-    <section class="reservation" id="reservation">
-        <div class="container">
-            <h2>ご予約</h2>
-            <form class="reservation-form">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">電話番号</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">ご希望のサービス</label>
-                    <select id="service" name="service" required>
-                        <option value="">選択してください</option>
-                        <option value="facial">フェイシャルトリートメント</option>
-                        <option value="hair">ヘアスタイリング</option>
-                        <option value="nail">ネイルアート</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <div class="form-group half">
-                        <label for="date">ご希望の日付</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group half">
-                        <label for="time">ご希望の時間</label>
-                        <select id="time" name="time" required>
-                            <option value="">選択してください</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="12:00">12:00</option>
-                            <option value="13:00">13:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">ご要望など</label>
-                    <textarea id="message" name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">予約を確定する</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2 data-aos="fade-up">よくある質問</h2>
-            <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ysas4vcp.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>初めての場合、何を持っていけばいいですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>特に必要なものはありません。お客様のお好みやお悩みをお伝えいただければ、最適なプランをご提案いたします。初回カウンセリングでじっくりお話を伝えてください。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+        <!-- 施術フロー -->
+        <section id="flow" class="flow-section">
+            <div class="container">
+                <h2 class="section-title">施術の流れ</h2>
+                <p class="section-subtitle">ご来店からお帰りまで、私たちが心を込めておもてなしいたします。</p>
+                <div class="timeline-container-wrapper">
+                    <div class="timeline-container" id="timeline-container">
+                        <!-- Step 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">1</div>
+                            <div class="timeline-content">
+                                <h3>カウンセリング</h3>
+                                <p>お客様のお悩みやご希望を丁寧にヒアリングし、最適なプランをご提案します。</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_qm8hs9bb.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>予約のキャンセルは可能ですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、予約日の24時間前まではキャンセル料は発生しません。それ以降はキャンセル料が発生する場合があります。お早めにご連絡いただけると幸いです。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                        <!-- Step 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">2</div>
+                            <div class="timeline-content">
+                                <h3>お着替え</h3>
+                                <p>リラックスできるガウンをご用意しております。完全個室で安心しておくつろぎください。</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_tiviyc3p.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>施術にかかる時間はどのくらいですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>メニューによって異なりますが、フェイシャルは約60分、ネイルは90-120分、ボディマッサージは60-90分が目安です。お時間に余裕を持ってご来店いただくと安心です。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                        <!-- Step 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">3</div>
+                            <div class="timeline-content">
+                                <h3>施術</h3>
+                                <p>経験豊富なエステティシャンが、確かな技術で丁寧に施術を行います。</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_2znxgjyt.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>支払い方法は何がありますか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>現金、クレジットカード、電子マネーでのお支払いが可能です。当日のお支払いだけでなく、事前のオンライン決済も可能です。お得なプリペイドプランもご用意しています。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                        <!-- Step 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">4</div>
+                            <div class="timeline-content">
+                                <h3>アフターケア</h3>
+                                <p>施術後のお肌の状態を確認し、ご自宅でのケア方法をアドバイスいたします。</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_khzniaya.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>駐車場はありますか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、当店のお客様専用の駐車場が3台あります。満車の場合は近くのコインパーキングをご利用ください。事前にお電話いただければ駐車場の確保も可能です。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                        <!-- Step 5 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">5</div>
+                            <div class="timeline-content">
+                                <h3>ティータイム</h3>
+                                <p>ハーブティーを飲みながら、施術後の余韻をお楽しみください。ご質問などもお気軽にどうぞ。</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- フローティングキャンペーンバッジ -->
-    <div class="floating-campaign-badge" id="campaignBadge">
-        <div class="badge-content">初回限定<br>20%OFF</div>
-    </div>
-    
-
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2 data-aos="fade-up">よくある質問</h2>
-            <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ysas4vcp.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>初めての場合、何を持っていけばいいですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>特に必要なものはありません。お客様のお好みやお悩みをお伝えいただければ、最適なプランをご提案いたします。初回カウンセリングでじっくりお話を伝えてください。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">よくあるご質問</h2>
+                <p class="section-subtitle">その他ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+                <div class="faq-accordion">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>予約は必要ですか？</span>
+                            <div class="lottie-icon" data-lottie-path="lottie/arrow.json"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>はい、当店は完全予約制となっております。お客様一人ひとりに丁寧なサービスを提供するため、お手数ですが事前のこ予約をお願いいたします。当ページの「今すぐ予約する」ボタンから簡単にご予約いただけます。</p>
+                            <div class="feedback-container">
+                                <span>この回答は役に立ちましたか？</span>
+                                <button class="feedback-btn">はい</button>
+                                <button class="feedback-btn">いいえ</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_qm8hs9bb.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>予約のキャンセルは可能ですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、予約日の24時間前まではキャンセル料は発生しません。それ以降はキャンセル料が発生する場合があります。お早めにご連絡いただけると幸いです。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>化粧をしたまま行っても大丈夫ですか？</span>
+                            <div class="lottie-icon" data-lottie-path="lottie/arrow.json"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>はい、問題ございません。施術前にクレンジングをさせていただきますので、メイクをしたままご来店いただけます。施術後には、簡単なメイク直しができるパウダースペースもご用意しております。</p>
+                            <div class="feedback-container">
+                                <span>この回答は役に立ちましたか？</span>
+                                <button class="feedback-btn">はい</button>
+                                <button class="feedback-btn">いいえ</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_tiviyc3p.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>施術にかかる時間はどのくらいですか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>メニューによって異なりますが、フェイシャルは約60分、ネイルは90-120分、ボディマッサージは60-90分が目安です。お時間に余裕を持ってご来店いただくと安心です。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_2znxgjyt.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>支払い方法は何がありますか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>現金、クレジットカード、電子マネーでのお支払いが可能です。当日のお支払いだけでなく、事前のオンライン決済も可能です。お得なプリペイドプランもご用意しています。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <div class="faq-question-content">
-                            <div class="faq-lottie">
-                                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_khzniaya.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-                            </div>
-                            <h3>駐車場はありますか？</h3>
-                        </div>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、当店のお客様専用の駐車場が3台あります。満車の場合は近くのコインパーキングをご利用ください。事前にお電話いただければ駐車場の確保も可能です。</p>
-                        <div class="faq-feedback">
-                            <p>この回答はお役に立ちましたか？</p>
-                            <div class="feedback-buttons">
-                                <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i></button>
-                                <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i></button>
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>どのような支払い方法がありますか？</span>
+                            <div class="lottie-icon" data-lottie-path="lottie/arrow.json"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>現金、各種クレジットカード（VISA, MasterCard, American Express, JCB）、および一部の電子マネー（PayPay, LINE Pay）に対応しております。</p>
+                            <div class="feedback-container">
+                                <span>この回答は役に立ちましたか？</span>
+                                <button class="feedback-btn">はい</button>
+                                <button class="feedback-btn">いいえ</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 予約フォーム -->
-    <section class="reservation" id="reservation">
-        <div class="container">
-            <h2>ご予約</h2>
-            <form class="reservation-form">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">電話番号</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">ご希望のサービス</label>
-                    <select id="service" name="service" required>
-                        <option value="">選択してください</option>
-                        <option value="facial">フェイシャルトリートメント</option>
-                        <option value="hair">ヘアスタイリング</option>
-                        <option value="nail">ネイルアート</option>
-                        <option value="massage">ボディマッサージ</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">ご希望の日付</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">ご希望の時間</label>
-                    <select id="time" name="time" required>
-                        <option value="">選択してください</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                        <option value="12:00">12:00</option>
-                        <option value="13:00">13:00</option>
-                        <option value="14:00">14:00</option>
-                        <option value="15:00">15:00</option>
-                        <option value="16:00">16:00</option>
-                        <option value="17:00">17:00</option>
-                        <option value="18:00">18:00</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">ご要望など</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">予約を確定する</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- フッター -->
-    <footer>
+    <footer id="footer" class="footer-section">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-info" data-aos="fade-up">
-                    <h3>ビューティーサロン サクラ</h3>
-                    <address>
-                        <p><i class="fas fa-map-marker-alt"></i> 〒123-4567 東京都渋谷区渋谷1-2-3</p>
-                        <p><i class="fas fa-clock"></i> 営業時間: 10:00 - 19:00 (水曜定休)</p>
-                        <p><i class="fas fa-phone-alt"></i> 電話: <a href="tel:0312345678">03-1234-5678</a></p>
-                        <p><i class="fas fa-envelope"></i> メール: <a href="mailto:info@sakura-beauty.jp">info@sakura-beauty.jp</a></p>
-                    </address>
+                <div class="footer-item">
+                    <h4>ACCESS</h4>
+                    <p>〒150-0002<br>東京都渋谷区渋谷1-2-3<br>AOYAMAビル 5F</p>
                 </div>
-                <div class="footer-menu" data-aos="fade-up" data-aos-delay="100">
-                    <h3>メニュー</h3>
-                    <ul>
-                        <li><a href="#services">サービス一覧</a></li>
-                        <li><a href="#testimonials">お客様の声</a></li>
-                        <li><a href="#flow">施術の流れ</a></li>
-                        <li><a href="#campaign">キャンペーン</a></li>
-                        <li><a href="#faq">よくある質問</a></li>
-                    </ul>
+                <div class="footer-item">
+                    <h4>OPEN HOURS</h4>
+                    <p>平日: 11:00 - 21:00<br>土日祝: 10:00 - 19:00<br>定休日: 毎週火曜日</p>
                 </div>
-                <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
-                    <h3>フォローください</h3>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="LINE" class="social-icon"><i class="fab fa-line"></i></a>
+                <div class="footer-item">
+                    <h4>CONTACT</h4>
+                    <p>Tel: 03-1234-5678<br>Mail: info@beautysalon.example.com</p>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">LINE</a>
                     </div>
-                    <div class="newsletter">
-                        <h4>ニュースレター登録</h4>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="メールアドレス" required>
-                            <button type="submit" class="btn secondary-btn">登録</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
-                    <h3>リンク</h3>
-                    <ul>
-                        <li><a href="#">会社概要</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
-                        <li><a href="#">利用規約</a></li>
-                        <li><a href="#">お問い合わせ</a></li>
-                        <li><a href="#">採用情報</a></li>
-                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ビューティーサロン サクラ. All Rights Reserved.</p>
-                <a href="#top" class="btn secondary-btn back-to-top"><i class="fas fa-chevron-up"></i></a>
+                <a href="#hero" class="to-top-link">ご予約はこちらから</a>
+                <p class="copyright">&copy; 2024 Beauty Salon. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- フローティング予約ボタン -->
-    <div class="floating-reservation">
-        <a href="#reservation" class="btn primary-btn">予約する</a>
-    </div>
-    
-    <!-- モバイル用予約ボタン -->
-    <div class="mobile-reservation-button">
-        <a href="#reservation" class="btn primary-btn">予約セクションへ移動</a>
-    </div>
-    
-    <!-- フローティングチャットボタン -->
-    <div class="floating-chat">
-        <button id="chatButton" class="chat-btn">
-            <i class="fas fa-comments"></i>
-            <span>チャットで相談</span>
-        </button>
-    </div>
-    
-    <!-- チャットウィンドウ -->
-    <div class="chat-window" id="chatWindow">
-        <div class="chat-header">
-            <h3>カスタマーサポート</h3>
-            <button id="closeChatWindow" class="close-chat"><i class="fas fa-times"></i></button>
+    <!-- ライブカウンセリング -->
+    <div class="live-counseling-container">
+        <div class="chat-icon" id="chat-icon">
+            <!-- チャットアイコンのSVGなどをここに配置 -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32px" height="32px"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
         </div>
-        <div class="chat-body">
-            <div class="chat-messages">
-                <div class="message received">
-                    <p>こんにちは！ビューティーサロン サクラへようこそ。何かお手伝いできることはありますか？</p>
-                    <span class="message-time">14:03</span>
-                </div>
-            </div>
-            <form class="chat-input-form">
-                <input type="text" placeholder="メッセージを入力..." class="chat-input">
-                <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i></button>
-            </form>
+        <div class="toast-notification" id="toast-notification">
+            <p>ご不明な点はございますか？<br><strong>今すぐ相談できます</strong></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
