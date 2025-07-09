@@ -265,6 +265,7 @@ ul {
     color: var(--color-white);
     margin-bottom: var(--spacing-sm);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
 }
 
 .hero-content p {
@@ -883,6 +884,9 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
     .global-nav {
         display: none;
         position: absolute;
@@ -922,7 +926,7 @@ ul {
 
 @media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .glass-panel {
