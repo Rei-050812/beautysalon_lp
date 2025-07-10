@@ -3,70 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美容サロン | 美しさを引き出す特別な空間</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Beauty Salon | 高品質な美容サービス</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <h1>Beauty<span>Salon</span></h1>
+                </a>
+            </div>
+            <nav class="global-nav">
+                <ul>
+                    <li><a href="#about">サロンについて</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#testimonials">お客様の声</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#access">店舗アクセス</a></li>
+                    <li><a href="#reservation" class="nav-reservation">ご予約</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
     <!-- ヒーローセクション -->
     <section class="hero">
-        <div class="container">
+        <div class="hero-image"></div>
+        <div class="glass-panel">
             <div class="hero-content">
-                <h1>美しさを引き出す<br>特別な空間</h1>
-                <p>あなただけの美しさを見つける特別なサロン体験をご提供します</p>
+                <h1>美しさは自信から生まれる</h1>
+                <p>あなただけの美しさを引き出す、プレミアムビューティーサロン</p>
+                <button class="cta-button primary reservation-btn">今すぐ予約する</button>
             </div>
-            <a href="#reservation" class="btn primary-btn">今すぐ予約する</a>
+        </div>
+    </section>
+    
+    <!-- サロンについて -->
+    <section class="about-salon" id="about">
+        <div class="container">
+            <h2 class="section-title">サロンについて</h2>
+            <div class="about-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="images/コンセプト.jpg" alt="コンセプト">
+                    </div>
+                    <h3>コンセプト</h3>
+                    <p>「美しさは自信から生まれる」をモットーに、お客様一人ひとりの個性を大切にした美容サービスを提供しています。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="images/こだわり.jpg" alt="こだわり">
+                    </div>
+                    <h3>こだわり</h3>
+                    <p>厳選された高品質な製品と最新の技術を使用し、お客様に最高の美容体験をお届けします。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="images/スタッフの想い.jpg" alt="スタッフの想い">
+                    </div>
+                    <h3>スタッフの想い</h3>
+                    <p>経験豊富なスタッフが、お客様の美しさを引き出すために真心を込めたサービスを提供いたします。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="images/サロン空間.jpg" alt="サロン空間">
+                    </div>
+                    <h3>サロン空間</h3>
+                    <p>リラックスできる上質な空間で、日常の喧騒を忘れ、心身ともに癒される特別なひとときをお過ごしください。</p>
+                </div>
+            </div>
+            <div class="about-image-gallery">
+                <img src="images/サロン内装１.jpg" alt="サロン内装1">
+                <img src="images/サロン内装２.jpg" alt="サロン内装2">
+                <img src="images/サロン内装３.jpg" alt="サロン内装3">
+            </div>
         </div>
     </section>
 
     <!-- サービス紹介 -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2>人気のサービス</h2>
-            <div class="services-grid">
+            <h2 class="section-title">人気のサービス</h2>
+            <div class="service-cards">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <h3>フェイシャルトリートメント</h3>
-                    <p>肌質に合わせた贅沢なスキンケア</p>
-                    <div class="service-buttons">
-                        <a href="#" class="btn secondary-btn">詳細を見る</a>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-spa"></i>
+                            <h3>フェイシャルトリートメント</h3>
+                            <p>お肌の悩みに合わせたケア</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>フェイシャルトリートメント</h3>
+                            <p>肌質や悩みに合わせた最適なトリートメントで、透明感のある美しいお肌へ導きます。</p>
+                            <p class="price">¥8,800〜</p>
+                            <button class="cta-button secondary reservation-btn">予約する</button>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3>ヘアスタイリング</h3>
-                    <p>トレンドを取り入れた似合わせカット</p>
-                    <div class="service-buttons">
-                        <a href="#" class="btn secondary-btn">詳細を見る</a>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>ネイルアート</h3>
-                    <p>季節に合わせたデザインネイル</p>
-                    <div class="service-buttons">
-                        <a href="#" class="btn secondary-btn">詳細を見る</a>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-cut"></i>
+                            <h3>ヘアスタイリング</h3>
+                            <p>トレンドを取り入れたデザイン</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>ヘアスタイリング</h3>
+                            <p>お客様の骨格や髪質に合わせたスタイリングで、理想のヘアスタイルを実現します。</p>
+                            <p class="price">¥6,600〜</p>
+                            <button class="cta-button secondary reservation-btn">予約する</button>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>ボディマッサージ</h3>
-                    <p>疲れを癒す全身リラクゼーション</p>
-                    <div class="service-buttons">
-                        <a href="#" class="btn secondary-btn">詳細を見る</a>
-                        <a href="#reservation" class="btn primary-btn">予約する</a>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>ネイルアート</h3>
+                            <p>季節に合わせたデザイン</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>ネイルアート</h3>
+                            <p>トレンドを取り入れたオリジナルデザインで、指先から美しさを演出します。</p>
+                            <p class="price">¥5,500〜</p>
+                            <button class="cta-button secondary reservation-btn">予約する</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,216 +145,286 @@
     </section>
 
     <!-- お客様の声 -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>お客様の声</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://via.placeholder.com/100" alt="お客様1">
+            <h2 class="section-title">お客様の声</h2>
+            <div class="testimonial-swiper-container">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="client-image">
+                                    <img src="images/田中美咲.jpg" alt="田中美咲" class="testimonial-image">
+                                </div>
+                                <p class="quote">「スタッフの方々の丁寧な対応と高い技術力に感動しました。お肌の悩みが解消され、自信を取り戻せました。」</p>
+                                <p class="client-name">田中 美咲</p>
+                                <p class="client-info">30代・会社員</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="client-image">
+                                    <img src="images/佐藤恵子.jpg" alt="佐藤恵子" class="testimonial-image">
+                                </div>
+                                <p class="quote">「ネイルアートのデザインが素晴らしく、いつも褒められます。スタッフの方々の提案力が素晴らしいです。」</p>
+                                <p class="client-name">佐藤 恵子</p>
+                                <p class="client-info">20代・学生</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="client-image">
+                                    <img src="images/鈴木健太.jpg" alt="鈴木健太" class="testimonial-image">
+                                </div>
+                                <p class="quote">「ヘアスタイリングが素晴らしく、理想通りの髪型になりました。サロンの雰囲気も落ち着いていて最高です。」</p>
+                                <p class="client-name">鈴木 健太</p>
+                                <p class="client-info">40代・自営業</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"フェイシャルトリートメントを受けて、肌の調子が格段に良くなりました。スタッフの方の丁寧な対応も素晴らしかったです。"</p>
-                        <p class="author">佐藤 美咲さん</p>
-                        <p class="availability">30分で予約可能</p>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://via.placeholder.com/100" alt="お客様2">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施術の流れ -->
+    <section class="treatment-flow">
+        <div class="container">
+            <h2 class="section-title">施術の流れ</h2>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>カウンセリング</h3>
+                            <p>お客様のご要望や悩みをヒアリングし、最適な施術プランをご提案します。</p>
+                        </div>
                     </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"ネイルアートが本当に素敵で、友達からも褒められました。次回も楽しみにしています。"</p>
-                        <p class="author">田中 由美さん</p>
-                        <p class="availability">本日予約可能</p>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>クレンジング</h3>
+                            <p>お肌の状態に合わせたクレンジングで、毛穴の汚れや余分な皮脂を取り除きます。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://via.placeholder.com/100" alt="お客様3">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>施術</h3>
+                            <p>高品質な製品と最新の技術を用いて、お客様に合わせた施術を行います。</p>
+                        </div>
                     </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"ボディマッサージで日頃の疲れがすっかり取れました。定期的に通いたいと思います。"</p>
-                        <p class="author">鈴木 健太さん</p>
-                        <p class="availability">明日から予約可能</p>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>仕上げ</h3>
+                            <p>施術後のケアと次回のアドバイスを行い、美しさを持続させるサポートをします。</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 施術フロー -->
-    <section class="flow">
-        <div class="container">
-            <h2>施術の流れ</h2>
-            <div class="flow-steps">
-                <div class="flow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>カウンセリング</h3>
-                    <p>お客様のお悩みやご要望をじっくりとお伺いします</p>
-                    <a href="#step2" class="btn secondary-btn">次へ進む</a>
-                </div>
-                <div class="flow-step" id="step2">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-hands"></i>
-                    </div>
-                    <h3>施術</h3>
-                    <p>熟練のスタッフによる丁寧な施術でお悩みを解消</p>
-                    <a href="#step3" class="btn secondary-btn">次へ進む</a>
-                </div>
-                <div class="flow-step" id="step3">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3>アフターケア</h3>
-                    <p>施術後のケア方法やホームケアのアドバイス</p>
-                    <a href="#campaign" class="btn primary-btn">特典を見る</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 特典・キャンペーン -->
-    <section class="campaign" id="campaign">
+    <!-- キャンペーン -->
+    <section class="campaign">
         <div class="container">
             <div class="campaign-banner">
-                <div class="campaign-badge">初回限定<br>20%OFF</div>
-                <div class="campaign-content">
-                    <h2>新規のお客様限定キャンペーン</h2>
-                    <p>全てのメニューが20%オフでご利用いただけます</p>
-                    <p class="campaign-period">2025年8月末まで</p>
-                    <a href="#reservation" class="btn primary-btn">今すぐ予約する</a>
-                </div>
+                <h3>初回限定20%オフキャンペーン実施中！</h3>
+                <p>全てのメニューが対象。この機会にぜひお試しください。</p>
+                <button class="cta-button primary reservation-btn">特典付き予約はこちら</button>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- よくある質問 -->
+    <section class="faq" id="faq">
         <div class="container">
-            <h2>よくある質問</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>予約のキャンセルはいつまでできますか？</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            <h2 class="section-title">よくある質問</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>予約なしでも施術は可能ですか？</h3>
+                        <div class="lottie-container" data-animation="accordion"></div>
                     </div>
-                    <div class="faq-answer">
-                        <p>ご予約の24時間前までにご連絡いただければ、キャンセル料は発生いたしません。それ以降のキャンセルは、施術料金の50%を頂戴しております。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>初めての来店でも大丈夫ですか？</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>もちろんです。初めてのお客様には丁寧なカウンセリングを行い、お悩みやご要望に合わせたプランをご提案いたします。また、初回限定の特典もございますので、お気軽にご来店ください。</p>
+                    <div class="accordion-content">
+                        <p>基本的には予約制となっておりますが、空き状況によっては当日のご案内も可能です。お電話でご確認いただくことをおすすめします。</p>
+                        <div class="feedback">
+                            <p>このお答えは役に立ちましたか？</p>
+                            <button class="feedback-btn" data-value="yes">はい</button>
+                            <button class="feedback-btn" data-value="no">いいえ</button>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>支払い方法は何がありますか？</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>施術にかかる時間はどのくらいですか？</h3>
+                        <div class="lottie-container" data-animation="accordion"></div>
                     </div>
-                    <div class="faq-answer">
-                        <p>現金、クレジットカード、電子マネー（PayPay、LINE Pay、楽天ペイ）でのお支払いが可能です。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>駐車場はありますか？</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、サロン専用の駐車場を3台分ご用意しております。満車の場合は近隣のコインパーキングをご利用ください（2時間分の駐車料金サービスあり）。</p>
+                    <div class="accordion-content">
+                        <p>メニューによって異なりますが、フェイシャルトリートメントは約60分、ヘアスタイリングは約90分、ネイルアートは約120分が目安です。詳細はメニュー表をご確認ください。</p>
+                        <div class="feedback">
+                            <p>このお答えは役に立ちましたか？</p>
+                            <button class="feedback-btn" data-value="yes">はい</button>
+                            <button class="feedback-btn" data-value="no">いいえ</button>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>子連れでも利用できますか？</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>キャンセルポリシーについて教えてください</h3>
+                        <div class="lottie-container" data-animation="accordion"></div>
                     </div>
-                    <div class="faq-answer">
-                        <p>小さなお子様連れのお客様も歓迎しております。キッズスペースもございますので、ご安心ください。ただし、混雑時は他のお客様のご迷惑にならないようご配慮をお願いいたします。</p>
+                    <div class="accordion-content">
+                        <p>ご予約の24時間前までのキャンセルは無料です。それ以降のキャンセルについては、キャンセル料として施術料金の50%を頂戴しております。</p>
+                        <div class="feedback">
+                            <p>このお答えは役に立ちましたか？</p>
+                            <button class="feedback-btn" data-value="yes">はい</button>
+                            <button class="feedback-btn" data-value="no">いいえ</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- アクセスマップ -->
+    <section class="access-map" id="access">
+        <div class="container">
+            <h2 class="section-title">店舗アクセス</h2>
+            <div class="access-grid">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3776177788325!2d139.7016358!3d35.6580339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1656000000000!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="access-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>住所</h4>
+                            <p>〒123-4567<br>東京都渋谷区美容町1-2-3</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>営業時間</h4>
+                            <p>平日: 10:00 - 20:00<br>土日祝: 9:00 - 19:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>お問い合わせ</h4>
+                            <p>TEL: 03-1234-5678<br>Email: info@beautysalon.jp</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-subway"></i>
+                        <div>
+                            <h4>アクセス</h4>
+                            <p>渋谷駅から徒歩5分<br>表参道駅から徒歩8分</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- 予約フォーム -->
     <section class="reservation" id="reservation">
         <div class="container">
-            <h2>ご予約</h2>
-            <form class="reservation-form">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">電話番号</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">ご希望のサービス</label>
-                    <select id="service" name="service" required>
-                        <option value="">選択してください</option>
-                        <option value="facial">フェイシャルトリートメント</option>
-                        <option value="hair">ヘアスタイリング</option>
-                        <option value="nail">ネイルアート</option>
-                        <option value="massage">ボディマッサージ</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">ご希望の日付</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">ご希望の時間</label>
-                    <select id="time" name="time" required>
-                        <option value="">選択してください</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                        <option value="12:00">12:00</option>
-                        <option value="13:00">13:00</option>
-                        <option value="14:00">14:00</option>
-                        <option value="15:00">15:00</option>
-                        <option value="16:00">16:00</option>
-                        <option value="17:00">17:00</option>
-                        <option value="18:00">18:00</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">ご要望など</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">予約を確定する</button>
-            </form>
+            <h2 class="section-title">ご予約</h2>
+            <div class="reservation-form-container">
+                <form class="reservation-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話番号</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">ご希望日</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">ご希望時間</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">ご希望のサービス</label>
+                        <select id="service" name="service" required>
+                            <option value="">選択してください</option>
+                            <option value="facial">フェイシャルトリートメント</option>
+                            <option value="hair">ヘアスタイリング</option>
+                            <option value="nail">ネイルアート</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button primary">予約を確定する</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- フッター -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-info">
-                    <h3>美容サロン</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 〒123-4567 東京都渋谷区美容町1-2-3</p>
-                    <p><i class="fas fa-clock"></i> 営業時間: 10:00〜19:00（火曜定休）</p>
-                    <p><i class="fas fa-phone"></i> 03-1234-5678</p>
+                    <h3>Beauty Salon</h3>
+                    <p>〒123-4567<br>東京都渋谷区美容町1-2-3</p>
+                </div>
+                <div class="footer-hours">
+                    <h4>営業時間</h4>
+                    <p>平日: 10:00 - 20:00<br>土日祝: 9:00 - 19:00</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <p>TEL: 03-1234-5678<br>Email: info@beautysalon.jp</p>
                 </div>
                 <div class="footer-social">
-                    <h3>フォローする</h3>
+                    <h4>SNS</h4>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -291,21 +432,20 @@
                         <a href="#"><i class="fab fa-line"></i></a>
                     </div>
                 </div>
-                <div class="footer-cta">
-                    <a href="#reservation" class="btn primary-btn">もう一度予約する</a>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 美容サロン All Rights Reserved.</p>
+                <p>© 2025 Beauty Salon. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- 追従予約ボタン -->
-    <div class="floating-button">
-        <a href="#reservation" class="btn primary-btn">予約する</a>
+    <!-- 固定予約ボタン -->
+    <div class="floating-cta">
+        <button class="cta-button primary reservation-btn">今すぐ予約する</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
