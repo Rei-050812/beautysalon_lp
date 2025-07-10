@@ -612,7 +612,7 @@ ul {
 /* ===== FAQ SECTION ===== */
 .faq {
     padding: var(--spacing-xl) 0;
-    background-color: var(--color-white);
+    background-color: #F7F5F8;
 }
 
 .accordion {
@@ -688,7 +688,7 @@ ul {
 /* ===== ACCESS MAP SECTION ===== */
 .access-map {
     padding: var(--spacing-xl) 0;
-    background-color: var(--color-pastel-mint);
+    background-color: #F7F5F8;
 }
 
 .access-grid {
